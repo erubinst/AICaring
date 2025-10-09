@@ -43,6 +43,7 @@ def map_common_clusters(map_folder, p):
     # cluster_weekday = recurring_clusters_by_weekday(df)
     create_weekly_locations_map(df, recurring_clusters, p)
 
+
 def map_weekly_clusters(map_folder, p):
     path = os.path.join(map_folder,f'locations_with_names_{p}.csv' )
     df = pd.read_csv(path)    
@@ -52,6 +53,7 @@ def map_weekly_clusters(map_folder, p):
     df, _ = cluster_weekly_locations(df, 0.5)
     cluster_weekday = recurring_clusters_by_weekday(df)
     create_map_weekday(df, cluster_weekday, p)
+
 
 def label_visits(map_folder, p):
     df = retrieve_json(map_folder)
