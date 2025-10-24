@@ -6,7 +6,7 @@ import pickle
 import json
 from config import *
 
-client = genai.Client(api_key="AIzaSyComIKziB9u4r95SVGFIYk6RcPpiFmY-Jg")
+client = genai.Client(api_key=API_KEY)
 
 
 # Prompt construction
